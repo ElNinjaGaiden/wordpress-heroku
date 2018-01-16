@@ -12,10 +12,11 @@ if (!empty(getenv('AWS_S3_URL'))) {
     // define('S3_UPLOADS_REGION', str_replace(array('s3-', '.amazonaws.com'), array('', ''), $env['host']));
     // define('S3_UPLOADS_BUCKET', ltrim($env['path'], '/'));
 
-    define( 'S3_UPLOADS_BUCKET', 'dgarciasblog');
-    define( 'S3_UPLOADS_KEY', 'AKIAJZXQRQLRHLELDJ2A' );
-    define( 'S3_UPLOADS_SECRET', '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' );
-    define( 'S3_UPLOADS_REGION', 'us-east-2');
+    define('S3_UPLOADS_AUTOENABLE', true);
+    define('S3_UPLOADS_BUCKET', 'dgarciasblog');
+    define('S3_UPLOADS_KEY', 'AKIAJZXQRQLRHLELDJ2A');
+    define('S3_UPLOADS_SECRET', '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');
+    define('S3_UPLOADS_REGION', 'us-east-2');
 
     unset($env);
 } else {
