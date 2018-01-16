@@ -6,7 +6,8 @@
 if (!empty(getenv('AWS_S3_URL'))) {
     $env = parse_url(getenv('AWS_S3_URL'));
 
-    error_log("hello Diego, this is a test!" + ' ' + $env['host']);
+    error_log("hello Diego, this is a test!");
+    error_log($env['host']);
 
     define('S3_UPLOADS_AUTOENABLE', true);
     define('S3_UPLOADS_KEY', $env['user']);
